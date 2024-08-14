@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+.container-login {
+    position: relative;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    height: 100vh;
+    width: 100%;
+    // background: linear-gradient(to left, #246a96e0, white);
+    img {
+        position: absolute;
+        width: 20%;
+        left: 20%;
+    }
+}
+
+.form-box {
+    width: 35%;
+    // background-color: black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 2%;
+    position: absolute;
+    right: 0;
+}
+
+.header-form {
+    margin-bottom: 15px;
+}
+
+button {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 75%;
+    color: white;
+    background-color: grey;
+    border: none;
+    border-radius: 10px;
+}
+
+.social {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+
+.social i {
+    font-size: 35px;
+}
+
+.social i:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.input-group-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    width: 80%;
+}
+
+.form-control {
+    padding: 12px 20px;
+    margin: 10px 0;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    width: 75%;
+}
+
+.input-group-text {
+    background-color: grey;
+    padding: 15px !important;
+    border-radius: 5px 0 0 5px;
+    display: none;
+}
+
+.input-password {
+    position: relative;
+}
+
+.login__icon {
+    position: absolute;
+    color: black;
+    right: 80px;
+    cursor: pointer;
+}
+
+.login-user {
+    font-size: 20px;
+}
+
+.fa-lock {
+    font-size: 20px;
+}
+
+.fa-user-circle {
+    color: #0008ff;
+}
+
+.login-btn {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 40%;
+    color: white;
+    background-color: #0008ff;
+    border: none;
+    border-radius: 10px;
+}
+
+.message {
+    color: black;
+}
+
+// .css-dpjnhs-MuiInputBase-root-MuiOutlinedInput-root {
+//     border: 1px solid grey;
+//     border-top: none;
+// }
+
+.form-control {
+    border: 1px solid grey !important;
+    border-top: none !important;
+    border-radius: 5px !important;
+    height: 44px !important;
+}
+
+.btn-sign {
+    color: #0008ff;
+    cursor: pointer;
+}
+
+.fixed-height {
+    max-height: 23px !important;
+}
+
+.css-9ddj71-MuiInputBase-root-MuiOutlinedInput-root {
+    height: 45px !important;
+}
+
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+    font-size: 14px !important;
+}
+
+.body-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.MuiOutlinedInput-root {
+    height: 45px;
+}

@@ -1,0 +1,39 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+
+.button {
+  margin: 1rem 0 0 0;
+  width: 40%;
+  outline: none;
+  cursor: pointer;
+  color: white;
+  font-family: "Nunito", Helvetica, Arial, sans-serif;;
+  font-size: 16px;
+  // font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 24px;
+  box-shadow: 6px 6px 9px 0 $dark_shadow7, -1px -1px 4px 0 $white_shadow5;
+  border: solid 1px #244f96;
+  background: #244f96;
+
+  &__disabled {
+    box-shadow: 6px 6px 9px 0 #42597a, -1px -1px 4px 0 #42597a;
+    background: #42597a;
+    border: 1px solid #42597a;
+    cursor: not-allowed;
+    opacity: 0.5;
+    color: $color-white-primary;
+  }
+}
+
+.button:active {
+  box-shadow: inset -6px -6px 6px 0 #244f96,
+    inset 6px 6px 8px 0 #244f96, inset 6px 6px 8px 0 #244f96,
+    inset -6px -6px 6px 0 #244f96 !important;
+  border-style: solid;
+  border-width: 1px;
+  border-image-slice: 1;
+  background:#244f96 !important;
+  background-origin: border-box;
+}

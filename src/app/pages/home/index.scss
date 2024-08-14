@@ -1,0 +1,73 @@
+.MTableHeader-header-14 {
+    background-color: #244f96 !important;
+}
+
+.MuiTableCell-head {
+    color: white !important;
+    background-color: #244f96 !important;
+}
+
+.jss14 {
+    background-color: #244f96 !important;
+}
+
+.MuiTableSortLabel-root.MuiTableSortLabel-active {
+    color: lightblue !important;
+}
+
+.MuiTableSortLabel-root.MuiTableSortLabel-active.MuiTableSortLabel-root.MuiTableSortLabel-active
+    .MuiTableSortLabel-icon {
+    color: lightblue !important;
+}
+
+.tbody {
+    .tr {
+        background-color: #fff !important;
+    }
+
+    .tr:nth-child(2n) {
+        background: #eee !important;
+    }
+}
+
+.MuiTableRow-root {
+    background-color: lavender;
+}
+
+// [data-rfd-drag-handle-context-id="1"] {
+//     justify-content: center;
+// }
+
+// .MuiTableCell-alignLeft {
+//     text-align: center !important;
+// }
+
+// [data-rfd-drag-handle-context-id="0"] {
+//     justify-content: center !important;
+// }
+
+[data-rfd-drag-handle-context-id="7"] {
+    justify-content: center !important;
+}
+
+img {
+    width: 60%;
+    padding: 14.5px 0;
+}
+
+.employee-refresh {
+    width: 13%;
+    margin: 0;
+    height: 50px;
+    padding: 0 15px;
+    font-size: 18px;
+    position: absolute;
+    right: 30px;
+    margin-top: 65px;
+    background-color: #0072ff;
+    cursor: pointer;
+}
+
+.MuiMenu-paper {
+    width: fit-content !important;
+}

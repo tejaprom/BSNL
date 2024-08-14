@@ -1,0 +1,252 @@
+.employee-header {
+    background-color: #244f96;
+}
+
+.employee-details {
+    display: flex;
+}
+
+.employee-details1 {
+    display: flex;
+}
+
+.employee-links {
+    ul {
+        padding: 0;
+
+        li {
+            list-style-type: none;
+            padding: 0px;
+            cursor: pointer;
+            text-align: start;
+        }
+
+        li:active {
+            color: #244f96 !important;
+            background-color: white;
+        }
+
+        li:hover {
+            color: #244f96 !important;
+            background-color: white;
+        }
+
+        a {
+            color: white !important;
+            font-size: 18px;
+            text-decoration: none;
+            padding: 0.8vw 0 0.8vw 2vw;
+            display: flex;
+        }
+
+        a:hover {
+            color: #244f96 !important;
+            background-color: white;
+        }
+    }
+}
+
+.employee-sidebar {
+    width: 15%;
+    background-color: #244f96;
+    position: fixed;
+    height: 100vh;
+}
+
+.employee-data {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    position: absolute;
+    right: 0;
+    padding-bottom: 3vw;
+}
+
+.employee-data-header {
+    display: flex;
+    justify-content: center;
+
+    h1 {
+        color: #244f96;
+    }
+
+    h2 {
+        color: #244f96;
+        position: absolute;
+        right: 3%;
+    }
+}
+
+.MuiPaper-root {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.line {
+    border-top: 1px solid white;
+    margin: 0;
+}
+
+.logout {
+    text-align: start;
+
+    h4 {
+        padding: 0.8vw 0 0.8vw 2vw;
+        cursor: pointer;
+        text-align: start;
+        margin: 0;
+        font-weight: 400;
+        font-size: 18px;
+    }
+
+    h4:hover {
+        color: #244f96 !important;
+        background-color: white;
+    }
+}
+
+.fa-pencil {
+    font-size: 20px;
+}
+
+.MuiTableSortLabel-root {
+    font-size: 16px !important;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paginationItem {
+    background: #fff;
+    border: 2px solid #666;
+    padding: 10px 15px;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    position: relative;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.paginationItem span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.prev,
+.next {
+    background: #fff;
+    border: none;
+    padding: 10px;
+    color: blue;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.paginationItem.active {
+    border: 1px solid #888;
+    color: #888;
+    pointer-events: none;
+}
+
+.prev.disabled,
+.next.disabled {
+    pointer-events: none;
+    box-shadow: none;
+    color: #999;
+}
+
+.employee-data {
+    position: unset;
+}
+.employee-sidebar {
+    width: 15%;
+    background-color: #244f96;
+    position: unset !important;
+    height: auto !important;
+    min-height: 100vh !important;
+    // display: none;
+}
+.MuiPaper-root {
+    // position: unset !important;
+    // margin-top: 0 !important;
+}
+.Component-horizontalScrollContainer-12 {
+    position: unset !important;
+}
+
+// .login-data .MuiTableHead-root {
+//     width: 100%;
+//     display: flex;
+// }
+
+// .login-data .MuiTableCell-head {
+//     text-align: center;
+//     display: flex;
+//     justify-content: center;
+// }
+
+// .login-data .MuiTableRow-head {
+//     width: 100%;
+//     text-align: center;
+//     display: flex;
+//     justify-content: center;
+// }
+// [data-rfd-drag-handle-context-id="1"] {
+//     justify-content: center !important;
+// }
+
+// .MuiTableCell-alignLeft {
+//     text-align: center !important;
+// }
+.login-data {
+    &__filter {
+        display: flex;
+        justify-content: center;
+        border: 1px solid #999;
+        &__container{
+            width: 90%;
+            display: flex;
+            padding: 1vw 0;
+        }
+    }
+    &__dates {
+        display: flex;
+        width: 60%;
+    }
+    &__start-date {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        h2 {
+            color: #244f96;
+            margin: 0;
+        }
+        input {
+            width: 50%;
+            padding: 0.5vw 0;
+            height: fit-content;
+        }
+    }
+    &__buttons {
+        display: flex;
+        justify-content: space-around;
+        width: 40%;
+        align-items: center;
+    }
+    &__button {
+        width: 30%;
+        margin: 0;
+        padding: 1vw 0;
+        height: fit-content;
+        background-color: #fff;
+        color: #244f96;
+        border: 1px solid #666;
+    }
+}

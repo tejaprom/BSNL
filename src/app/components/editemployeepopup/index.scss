@@ -1,0 +1,452 @@
+@import "../../../styles/variables.scss";
+@import "../../../styles/mixins.scss";
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 20;
+    background-color: $dark_shadow4;
+    cursor: auto;
+
+    &__dialog {
+        background-color: white;
+        // box-shadow: 0.4rem 0 0 0.56rem $dark_shadow4;
+        width: 70%;
+        min-height: 99.4%;
+        max-height: 100%;
+        padding: $font_large;
+        position: absolute;
+        border: 1px solid #989898;
+        right: -30%;
+        top: 40%;
+        transform: translate(-50%, -40%);
+        overflow: auto;
+
+        &__title {
+            position: relative;
+            &__cancelBackground {
+                &__cancel-box {
+                    // float: right;
+                    position: absolute;
+                    right: 0rem;
+                    top: 20px;
+                    width: 2rem;
+                    height: 2rem;
+                    background: linear-gradient(-45deg, white,rgb(232, 219, 219));
+                    // box-shadow: 4px 4px 9px 0 $dark_shadow3, -4px -4px 11px 0 $grey4,
+                        // inset 1px 1px 0 0 $dark_shadow4;
+                    border-radius: 50%;
+                    @include flexCenter;
+                    cursor: pointer;
+                }
+
+                &__cross {
+                    border: solid #757575;
+                    border-width: 0 2px 2px 0;
+                    padding: 4px;
+                    margin: 2px;
+                }
+
+                &__right-arrow {
+                    transform: rotate(-45deg);
+                    margin-left: 3px;
+                }
+
+                &__left-arrow {
+                    transform: rotate(135deg);
+                    margin-left: 0.1rem;
+                }
+            }
+
+            &__description {
+                width: 100%;
+                font-family: "Nunito", Helvetica, Arial, sans-serif;
+                font-size: $font_medium;
+                float: left;
+                color: #757575;
+            }
+        }
+
+        &__background {
+            background-color: $dark_shadow4;
+        }
+
+        &__elements {
+            padding-top: 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: space-between;
+
+            &__label {
+                font-family: "Nunito", Helvetica, Arial, sans-serif;
+                font-size: $font_small;
+                margin: $font_verysmall 0 $font_verysmall 0;
+                color: #000000ad;
+                text-align: start;
+            }
+
+            &__custom-dropdown {
+                width: 100%;
+                font-size: $font_medium;
+                color: $color-white-primary;
+                font-family: "Nunito", Helvetica, Arial, sans-serif;
+                font-weight: normal;
+                position: relative;
+
+                &__selection {
+                    height: $font_top9;
+                    border-radius: $font_small;
+                    font-family: "Nunito", Helvetica, Arial, sans-serif;
+                    padding: $font_verysmall;
+                    font-size: 1.1rem;
+                    cursor: pointer;
+                    position: relative;
+                    box-shadow: 6px 6px 9px 0 $dark_shadow7,
+                        -1px -1px 4px 0 $white_shadow5;
+                    width: 100%;
+                }
+
+                &__items-holder {
+                    width: 100%;
+                    margin-top: 3px;
+                    z-index: 100;
+                    overflow-y: auto;
+                    max-height: 150px;
+                    font-family: "Nunito", Helvetica, Arial, sans-serif;
+                    font-size: $font_medium;
+                    letter-spacing: 0.19px;
+                    color: $color-white-primary;
+                    cursor: pointer;
+                    position: absolute;
+                    border-radius: 8px;
+                    background-color: $dark2;
+                    box-shadow: 6px 6px 9px 0 $dark_shadow4,
+                        -6px -6px 8px 0 $white_shadow2, inset 4px 4px 8px 0 $white_shadow5,
+                        inset -3px -3px 8px 0 $dark_shadow9;
+
+                    &__dropdown-item {
+                        height: 4.5rem;
+                        padding: $font_medium $font_large $font_medium;
+                        font-family: "Nunito", Helvetica, Arial, sans-serif;
+                        font-size: $font_verysmall;
+                        background: $dark2;
+                        cursor: pointer;
+                        border-bottom: 1px solid $dark_shadow8;
+                    }
+                }
+
+                &__items-holder-category {
+                    width: 90%;
+                    margin-top: 3px;
+                    z-index: 100;
+                    overflow-y: auto;
+                    max-height: 150px;
+                    font-family: "Nunito", Helvetica, Arial, sans-serif;
+                    font-size: $font_medium;
+                    letter-spacing: 0.19px;
+                    color: $color-white-primary;
+                    cursor: pointer;
+                    position: absolute;
+                    border-radius: 8px;
+                    background-color: $dark2;
+                    box-shadow: 6px 6px 9px 0 $dark_shadow4,
+                        -6px -6px 8px 0 $white_shadow2, inset 4px 4px 8px 0 $white_shadow5,
+                        inset -3px -3px 8px 0 $dark_shadow9;
+                }
+
+                &__selection::after {
+                    display: block;
+                    content: "";
+                    width: $font_verysmall;
+                    height: $font_verysmall;
+                    border-right: 2px solid $primary_color3;
+                    border-bottom: 2px solid $primary_color3;
+                    transform: rotate(45deg);
+                    position: absolute;
+                    right: 2.3rem;
+                    top: $font_button;
+                }
+
+                &__selection:active,
+                &__selection:focus {
+                    border: solid 1px rgba(179, 115, 93, 0.39);
+                }
+            }
+
+            &__input {
+                width: 45%;
+            }
+
+            &__customInput {
+                background-color: white;
+                color: grey !important;
+                border: 1px solid #989898;
+                width: 90%;
+                height: $font_xlarge;
+                padding: 0.6rem $font_verysmall;
+                border-radius: 12px;
+                // box-shadow: -6px -6px 9px 0 $white_shadow6, 6px 6px 8px 0 $dark_shadow4,
+                    // inset 6px 6px 8px 0 $dark_shadow10, inset -6px -6px 6px 0 $dark6;
+                font-family: "Nunito", Helvetica, Arial, sans-serif;
+                font-size: $font_verysmall;
+                border-width: 1px;
+                letter-spacing: 0.19px;
+                // color: $color-white-primary;
+                // border-image: linear-gradient(104deg, $shadow2 5%, $shadow3 94%);
+            }
+
+            &__customInput:focus {
+                border: solid 1px rgba(179, 115, 93, 0.39);
+            }
+
+            &__textWidth {
+                width: 100%;
+                height: $font_top3;
+                padding: $font_verysmall;
+                border-radius: 12px;
+                box-shadow: -6px -6px 9px 0 $white_shadow6, 6px 6px 8px 0 $dark_shadow4,
+                    inset 6px 6px 8px 0 $dark_shadow10, inset -6px -6px 6px 0 $dark6;
+                font-family: "Nunito", Helvetica, Arial, sans-serif;
+                font-size: $font_verysmall;
+                letter-spacing: 0.19px;
+                color: $color-white-primary;
+                background-color: $dark6;
+                border-width: 1px;
+                border-image: linear-gradient(104deg, $shadow2 5%, $shadow3 94%);
+            }
+
+            &__textWidth:focus {
+                border: solid 1px rgba(179, 115, 93, 0.39);
+            }
+
+            &__image-container {
+                &__wrapper {
+                    position: relative;
+                    height: 232px;
+                    width: 100%;
+                    border-radius: 10px;
+                    @include flexCenter;
+                    overflow: hidden;
+                    box-shadow: -6px -6px 9px 0 $white_shadow6,
+                        6px 6px 8px 0 $dark_shadow4, inset 6px 6px 8px 0 $dark_shadow10,
+                        inset -6px -6px 6px 0 $dark6;
+                    font-family: "Nunito", Helvetica, Arial, sans-serif;
+                    font-size: $font_medium;
+                    letter-spacing: 0.19px;
+                    color: $color-white-primary;
+                    background-color: $dark6;
+                    border-width: 1px;
+                    border-image: linear-gradient(104deg, $shadow2 5%, $shadow3 94%);
+
+                    &__main-image {
+                        position: absolute;
+                        height: 100%;
+                        width: 100%;
+                        @include flexCenter;
+                        z-index: 20;
+
+                        img {
+                            height: 100%;
+                            width: 100;
+                            object-fit: cover;
+                        }
+                    }
+
+                    &__image-content {
+                        position: relative;
+
+                        &__upload-btn {
+                            font-size: $font_medium;
+                            font-weight: 500;
+                            outline: none;
+                            border: none;
+                            background: none;
+                            font-family: "Nunito", Helvetica, Arial, sans-serif;
+                            color: $color-white-primary;
+                        }
+                    }
+
+                    #cancel-btn {
+                        position: absolute;
+                        right: 15px;
+                        top: 15px;
+                        cursor: pointer;
+                        font-size: 20px;
+                        color: #cccccc;
+                        display: none;
+                    }
+                }
+
+                &__wrapper:active,
+                &__upload-btn:focus {
+                    border: solid 1px rgba(179, 115, 93, 0.39);
+                }
+
+                &__wrapper.active:hover #cancel-btn {
+                    display: block;
+                    color: linear-gradient(-45deg, $dark3, $grey6);
+                }
+
+                &__wrapper #cancel-btn:hover {
+                    color: $color-white-primary;
+                }
+            }
+
+            &__clr {
+                color: $grey9;
+            }
+        }
+
+        &__content {
+            padding: $font_top9 0 $font_large;
+        }
+
+        &__footer {
+            padding-top: $font_large;
+            text-align: center;
+
+            &__confirm {
+                width: 40%;
+                font-size: $font_small;
+                padding: $font_verysmall ;
+            }
+        }
+
+        &__pad10 {
+            padding-top: $font_verysmall;
+        }
+    }
+
+    &__table {
+        background-color: $color-white-primary;
+        box-shadow: 0.4rem 0 0 0.56rem $dark_shadow4;
+        width: 80%;
+        min-height: 99.4%;
+        max-height: 100%;
+        padding: 2rem;
+        position: absolute;
+        border: 1px solid $dark;
+        @include absoluteCenter;
+        overflow: auto;
+    }
+
+    &__index {
+        z-index: 5;
+    }
+
+    &__cancel {
+        box-shadow: none;
+    }
+
+    &__mar1 {
+        margin-left: $font_verysmall;
+    }
+
+    &__pad1 {
+        padding: 1.3rem $font_medium $font_verysmall $font_large;
+    }
+
+    &__pad-left {
+        padding-left: $font_xverysmall;
+    }
+
+    &__marTop {
+        margin-bottom: $font_verysmall;
+    }
+
+    &__type {
+        margin: 0 0 14px 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        box-shadow: none;
+    }
+
+    &__img-block {
+        @include flexbox;
+
+        &__input {
+            width: 95%;
+        }
+    }
+
+    &__cross-btn {
+        @include flexbox;
+        cursor: pointer;
+    }
+
+    &__cross-icon {
+        font-size: $font_button;
+        color: white;
+    }
+
+    &__add-btn {
+        width: 40%;
+        padding: $font_verysmall;
+    }
+
+    &__activeTab {
+        box-shadow: inset -6px -6px 6px 0 $dark6, inset 6px 6px 8px 0 $dark_shadow10,
+            inset 6px 6px 8px 0 $dark_shadow10, inset -6px -6px 6px 0 $dark6;
+        border-style: solid;
+        border-width: 1px;
+        border-image-source: linear-gradient(119deg, $shadow2 0%, $shadow3 98%);
+        border-image-slice: 1;
+        background: linear-gradient(to bottom, $dark2, $dark2),
+            linear-gradient(119deg, $shadow2 0%, $shadow3 98%);
+        background-origin: border-box;
+        background-clip: content-box, border-box;
+    }
+}
+
+.country-dropdown {
+    outline: none;
+    // background-color: $dark2;
+    border: 1px solid #989898;
+    width: 100%;
+    margin: 0;
+    height: $font_xxlarge;
+    padding: 0.6rem $font_verysmall;
+    border-radius: 5px;
+    // box-shadow: -6px -6px 9px 0 $white_shadow6, 6px 6px 8px 0 $dark_shadow4,
+        // inset 6px 6px 8px 0 $dark_shadow10, inset -6px -6px 6px 0 $dark6;
+    font-family: "Nunito", Helvetica, Arial, sans-serif;
+    font-size: $font_verysmall;
+    border-width: 1px;
+    letter-spacing: 0.19px;
+    color: #989898;
+    // border-image: linear-gradient(104deg, $shadow2 5%, $shadow3 94%);
+}
+
+.country-dropdown:focus,
+.country-dropdown:active {
+    border: solid 1px rgba(179, 115, 93, 0.39);
+}
+
+@media screen and (min-width:320px) and (max-width:760px) {
+    .overlay {
+        &__dialog {
+            width: 100%;
+            right: 0;
+            top: 0;
+            transform: translate(0, 0);
+        }
+    }
+
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .overlay {
+        &__dialog {
+            width: 50%;
+            transform: translate(-30%, -40%);
+        }
+    }
+}

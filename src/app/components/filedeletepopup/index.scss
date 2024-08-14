@@ -1,0 +1,45 @@
+.pop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__container {
+        background-color: #f6f6f6;
+        // width: 40%;
+        padding: 2vw 3vw;
+        border-radius: 10px;
+        position: relative;
+    }
+    &__cancel-box {
+        align-items: center;
+        background: linear-gradient(-45deg, #fff, #e8dbdb);
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        height: 2rem;
+        justify-content: center;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 2rem;
+    }
+    &__header {
+        h1 {
+            font-size: 26px;
+            color: #10377a;
+            margin: 0;
+            padding-bottom: 2vw;
+        }
+    }
+    &__confirm {
+        display: flex;
+        justify-content: space-around;
+        Button {
+            width: 30%;
+        }
+    }
+}

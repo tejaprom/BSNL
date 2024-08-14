@@ -1,0 +1,98 @@
+.form-box2 {
+    width: 82%;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    opacity: 0.5;
+    border-radius: 0%;
+}
+
+.container1 {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.btn-submit {
+    width: 40%;
+    background-color: #0008ff;
+}
+
+.text-header {
+    color: #0008ff;
+}
+
+.body-form-add {
+    padding: 10px;
+    width: 70%;
+    // border: 1px solid grey;
+}
+
+.form--select {
+    padding: 10px 20px;
+    margin: 10px 0 !important;
+    border-radius: 5px;
+    // border: 1px solid #232222;
+    border: none;
+    // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    // box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.form--input {
+    padding: 10px 20px;
+    margin: 10px 0 !important;
+    border-radius: 5px;
+    border: 1px solid #232222;
+    // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.form-1-add {
+    display: flex;
+    justify-content: center;
+}
+
+.form-l-add {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin: 0 20px;
+}
+
+.form-r-add {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin: 0 20px;
+}
+
+.form-box2-add {
+    width: 82%;
+    background-color: white;
+    padding:  20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0%;
+    position: absolute;
+    right: 0;
+}
+
+.header-form-add {
+    margin-bottom: 30px;
+
+    h4 {
+        font-size: 30px;
+        margin: 0;
+    }
+}
+
+.MuiTableCell-alignLeft {
+    text-align: left;
+    font-size: 14px !important;
+    // font-family: poppins !important;
+}
