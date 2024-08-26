@@ -223,7 +223,7 @@ const ManageSupervisor = (id, onCancel) => {
         }
         if (columnNames[key] === "emailId") {
           columns.push({
-            title: "Actions",
+            title: "Block Supervisor",
             field: columnNames[key],
             render: (row) => (
               <Switch
