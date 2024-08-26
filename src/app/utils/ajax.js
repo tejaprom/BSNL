@@ -1,4 +1,6 @@
+
 export function fetchNoCall(callback, url, method, payload) {
+    
     return new Promise(function (resolve, reject) {
         const options = {
             headers: {
@@ -54,7 +56,7 @@ export function fetchCall(callback, url, method, payload) {
 
 export function fetchLoginCall(callback, url, method, payload) {
     const token = sessionStorage.getItem('token');
-    // console.log(token);
+
     return new Promise(function (resolve, reject) {
         const options = {
             method,
@@ -62,32 +64,32 @@ export function fetchLoginCall(callback, url, method, payload) {
             headers: {
                 'Content-Type': 'application/json',
                 'accept': 'text/plain',
-                'authorization': 'Bearer ' + [token]
+                'authorization': 'Bearer ' + token
             }
         };
+
         fetch(url, options)
             .then((res) => {
-                return res.json();
+                // Check if the response status is 401 before parsing JSON
+                if (res.status === 401) {
+                    sessionStorage.setItem('url', url);
+                    sessionStorage.setItem('method', method);
+                    sessionStorage.setItem('payload', JSON.stringify(payload));
+                    window.location.href = '/'; // Redirect to login
+                    reject(new Error('Unauthorized - Redirecting to login'));
+                } else {
+                    return res.json();
+                }
             })
             .then((res) => {
-                if (res.error?.statusCode === 401 || res.error?.status === 401) {
-                    if (res.error) {
-                        sessionStorage.setItem('url', url);
-                        sessionStorage.setItem('method', method);
-                        sessionStorage.setItem('payload', JSON.stringify(payload));
-                    }
-                    const tokenPayload = {
-                        refreshToken: sessionStorage.getItem('refreshToken'),
-                    };
-
-                } else {
+                if (res) {
                     callback(res);
                     resolve(res);
                 }
             })
             .catch((err) => {
                 callback(err);
-                return err;
+                reject(err);
             });
     });
 }

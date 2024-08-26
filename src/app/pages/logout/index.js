@@ -19,6 +19,7 @@ const Logout = () => {
         sessionStorage.removeItem('token');
         sessionStorage.removeItem('admin');
         sessionStorage.clear();
+        localStorage.clear();
         window.location.reload();
     }
     return (

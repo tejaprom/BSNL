@@ -28,7 +28,8 @@ const Login = () => {
     history.push("/register");
   };
 
-  const handleLogin = (e, val) => {
+  const handleLogin = (e) => {
+    console.log("test")
     e.preventDefault();
     // event.preventDefault();
     if (validateEmail(email) && password) {

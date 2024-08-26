@@ -332,7 +332,7 @@ export const GetExcel= (callback, isUserId) => {
 // };
 
 export const Block_Supervisor = (callback, userId, payload) => {
-  const url = `${API_CONSTANTS.BLOCK_SUPERVISOR}?userId=${userId}`;
+  const url = `${API_CONSTANTS.BLOCK_SUPERVISOR}`;
   return fetch(url, {
     method: 'POST',
     headers: {
@@ -346,4 +346,14 @@ export const Block_Supervisor = (callback, userId, payload) => {
   .catch(error => console.error('Error:', error));
 };
 
+// export const Block_Supervisor= (callback, userId, payload) => {
+//   const url = `${API_CONSTANTS.BLOCK_SUPERVISOR}`;
+//   return fetchLoginCall(
+//     (response) => {
+//       callback(response);
+//     },
+//     url,
+//     API_METHODS.POST
+//   );
+// };
 

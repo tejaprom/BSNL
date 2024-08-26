@@ -123,29 +123,25 @@ const ManageSupervisor = (id, onCancel) => {
     setIseditpopupVisible(false);
   };
  
-  const handleToggle = (event, id) => {
-    const isEnabled = event.target.checked;
+  const handleBlockSupervisorToggle = (event, id) => {
+    const isActive = event.target.checked;
   
     // Prepare the payload with necessary data
     const payload = {
-      isEnabled: isEnabled
+      id: id, // ID of the supervisor
+      isActive: isActive, // Active status based on the switch
     };
   
     Block_Supervisor((res) => {
       const { message, statusCode } = res;
-      console.log(res.data)
       if (statusCode === 200) {
         console.log("User status updated successfully");
-        // getData();  
-        history.push("/");
-        // window.location.reload();
-
-        // alert(message);
-       
+        getData();  // Refresh the data after successful update
+        alert(message);
       } else {
         console.error(`Error: ${message}`);
       }
-    }, id, payload);  // Correct order of parameters
+    }, id, payload);  // Pass the correct parameters
   };
   
 
@@ -232,7 +228,7 @@ const ManageSupervisor = (id, onCancel) => {
             render: (row) => (
               <Switch
                 checked={row.isActive}
-                onChange={(event) => handleToggle(event, row.id)}
+                onChange={(event) => handleBlockSupervisorToggle(event, row.id)}
                 color="primary"
               />
             ),
