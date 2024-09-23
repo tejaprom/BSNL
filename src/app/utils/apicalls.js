@@ -334,7 +334,7 @@ export const GetExcel= (callback, isUserId) => {
 export const Block_Supervisor = (callback, userId, payload) => {
   const url = `${API_CONSTANTS.BLOCK_SUPERVISOR}`;
   return fetch(url, {
-    method: 'POST',
+    method: 'GET',
     headers: {
       'Content-Type': 'application/json',
       'Authorization': `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsIm5hbWVpZCI6IjYiLCJyb2xlcyI6IltcIkFkbWluXCJdIiwicm9sZSI6IkFkbWluIiwibmJmIjoxNzIzNTQ1ODc4LCJleHAiOjE3MjM1Njc0NzgsImlhdCI6MTcyMzU0NTg3OCwiaXNzIjoiaHR0cDovL3d3dy5ic25sLmNvbSIsImF1ZCI6Imh0dHA6Ly93d3cuYnNubC5jb20ifQ.FNoA8eFjKK29HV_MabsG9EAEGSVq_Xr2OHKmWxyJgTo`,
